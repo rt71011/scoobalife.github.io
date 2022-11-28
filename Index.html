@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--menu and close button shape on phones-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--font type-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="viewport"
+      content="with=device-width, initial-scale=1.0"
+      charset="UTF-8"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Scooba Life</title>
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="Index.html"><img src="gallery/Scooba Life-1.png" /></a>
+        <div class="nav-links" id="navlinks">
+          <i
+            class="fa fa-times-circle"
+            onclick="hideMenu()"
+            aria-hidden="true"
+          ></i>
+          <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Packages.html">Packages</a></li>
+            <li><a href="holiday.html">Holiday</a></li>
+            <li><a href="Equipment.html">Diving equipment</a></li>
+            <li><a href="About Us.html">About Us</a></li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()" aria-hidden="true"></i>
+
+        <!--<div class="search">
+          <form action="Index.html" method="get" class="search-bar">
+            <input
+              class="search-txt"
+              type="text"
+              name="q"
+              placeholder="Type to search"
+            />
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <a class="search-btn" href="#"></a>
+          </form>
+        </div>-->
+      </nav>
+
+      <div class="text-box">
+        <h1>The Advanced Package</h1>
+        <p>
+          With our advanced package you can get a discount of 20% on a liveboard
+          holiday
+        </p>
+        <button class="btn"><samp>Learn More</samp></button>
+      </div>
+    </section>
+
+    <!--New Section-->
+
+    <!-- Footer-->
+    <section class="footer">
+      <h5>About Us</h5>
+      <p>
+        We are a scuba diving center that offers variety of <br />
+        activities for professionals and begginers
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+      <p>Made by Razi Tariq</p>
+    </section>
+
+    <script>
+      var navlinks = document.getElementById("navlinks");
+      function showMenu() {
+        navlinks.style.right = "0";
+      }
+      function hideMenu() {
+        navlinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>

@@ -1,14 +1,14 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Sono', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
 }
-
 
  .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(gallery/scuba-home.jpg);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(gallery/scuba-home.jpg);    
     background-position: center;
     background-size: cover;
     position: relative;
@@ -18,29 +18,33 @@ nav {
     display: flex;
     padding: 2% 6%;
     justify-content: space-between;
-    align-items: center;
+    align-items: auto;
+    margin-top: 17px;
 }
 
 nav img {
-    width: 150px;
+    width: 245px;
+    height: auto;
+    margin-left: -43px;
+    margin-top: -40px;
 }
 
 .nav-links {
     flex: 1;
-    text-align: right;
+    text-align: center;
 }
 
 .nav-links ul li {
     list-style: none;
     display: inline-block;
-    padding: 8px 12px;
+    padding: 10px 14px;
     position: relative;
 }
 
 .nav-links ul li a {
     color: white;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 22px;
 }
 .nav-links ul li::after {
     content: '';
@@ -55,6 +59,7 @@ nav img {
 .nav-links ul li:hover::after {
     width: 100%;
 }
+
 
 .text-box {
     width: 90%;
@@ -79,6 +84,48 @@ nav img {
 }
 
 .btn {
+    border: none;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    padding: 17px 50px;
+    font-size: 20px;
+    box-shadow: 0 5px 15px black;
+}
+
+.btn samp {
+    position: relative;
+    z-index: 1;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: blueviolet;
+    -webkit-transition: all .5s ease-in-out;
+    transition: .5s;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateX(-25%) rotate(45deg);
+}
+
+.btn:hover::after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+        transform: translateX(-9%) translateX(-25%) rotate(45deg);
+    
+}
+
+
+
+/*.btn {
     display: inline-block;
     text-decoration: none;
     color: white;
@@ -93,13 +140,61 @@ nav img {
     border: 1px solid blueviolet;
     background: blueviolet;
     transition: 1ms;
+} */
+
+/*.search {
+    width: 70%;
+    min-height: 30vh;
+    padding: 2%;
+
 }
+
+.search-bar {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 5px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: blueviolet;
+}
+
+::placeholder {
+    color: violet;
+}
+
+.search-bar button img {
+    width: 22px;
+}
+
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: blueviolet;
+    cursor: pointer;
+} */s
+
+
 
 /* -for the menu and close butoons to only to be on the phone app not web */
 
 nav .fa {
     display: none;
 }
+
 
 /* Adding menu button for the small screens like mobile phones */
 
@@ -111,7 +206,7 @@ nav .fa {
         display: block;
     }
     .nav-links {
-        position: absolute;
+        position: fixed;
         background: blueviolet;
         height: 100vh;
         width: 200px;
@@ -198,67 +293,6 @@ p {
 /*The Footer*/
 
 .footer {
-    margin-top: 150px;
-    width: 100%;
-    padding: 100px 15%;
-    background: #333;
-    color: antiquewhite;
-    display: flex;
-}
-
-.footer div {
-    text-align: center;
-}
-
-.col-2 {
-    flex-grow: 2;
-}
-.footer div h3 {
-    font-weight: 300;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-}
-
-.col-1 a {
-    display: block;
-    text-decoration: none;
-    color: antiquewhite;
-    margin-bottom: 10px;
-}
-
-form input {
-    width: 400px;
-    height: 45px;
-    border-radius: 4px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    outline: none;
-    border: none;
-}
-
-form button {
-    background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-    border-radius: 30px;
-    padding: 10px 30px;
-    font-size: 15px;
-    cursor: pointer;
-}
-.social-media {
-    margin-top: 30px;
-}
-
-.social-media {
-    font-size: 22px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-/*End of Footer*/
-/* 2nd footer 
-.footer2 {
     width: 100%;
     text-align: center;
     padding: 30px 0;
@@ -268,7 +302,12 @@ form button {
     margin-top: 25px;
     margin-bottom: 25px;
     font-weight: 600;
-}*/
+}
+
+
+/*End of Footer*/
+
+
 
 
 
@@ -313,17 +352,76 @@ form button {
 }
 
 .prpl-btn {
-    border: 1px solid blueviolet;
-    background: transparent;
+    border: 3px solid blueviolet;
+    background-size: 500px;
+
+    background-position: 0%;
+    border-radius: 50px;
+
+}
+
+.prpl-btn:hover {
+    background-position: 100%;
+    transition: 1.3s;
+    border: 3px solid blueviolet;
     color: blueviolet;
 }
-.prpl-btn:hover {
-    color: white
+
+/* contact Us page */
+
+.location {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0px;
+
 }
 
+.location iframe {
+    width: 100%;
+}
 
+.contact-us {
+    width: 80%;
+    margin: auto;
+}
 
+.contact-col {
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
 
+.contact-col div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-col div .fa {
+    font-size: 28px;
+    color: blueviolet;
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.contact-col div p {
+    padding: 0;
+}
+
+.contact-col div h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: black;
+    font-weight: 400;
+}
+
+.contact-col input, .contact-col textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid blueviolet;
+    box-sizing: border-box;
+}
 
 
 
