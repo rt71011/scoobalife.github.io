@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--menu and close button shape on phones-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--font type-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Kanit:wght@700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="viewport"
+      content="with=device-width, initial-scale=1.0"
+      charset="UTF-8"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Scooba Life</title>
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"><img src="gallery/Scooba Life-1.png" /></a>
+        <div class="nav-links" id="navlinks">
+          <i
+            class="fa fa-times-circle"
+            onclick="hideMenu()"
+            aria-hidden="true"
+          ></i>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Packages.html">Packages</a></li>
+            <li><a href="holiday.html">Holiday</a></li>
+            <li><a href="Equipment.html">Diving equipment</a></li>
+            <li><a href="About Us.html">About Us</a></li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()" aria-hidden="true"></i>
+      </nav>
+
+      <div class="text-box">
+        <h1>Coming Soon</h1>
+        <p>This page is for the equipment we sell and rent for our customers</p>
+      </div>
+    </section>
+
+    <!-- Footer-->
+    <section class="footer">
+      <h5>About Us</h5>
+      <p>
+        We are a scuba diving center that offers variety of <br />
+        activities for professionals and begginers
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+      <p>Made by Razi Tariq</p>
+    </section>
+
+    <script>
+      var navlinks = document.getElementById("navlinks");
+      function showMenu() {
+        navlinks.style.right = "0";
+      }
+      function hideMenu() {
+        navlinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
